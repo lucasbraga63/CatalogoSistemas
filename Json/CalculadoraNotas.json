@@ -1,0 +1,42 @@
+[
+    {
+        "materia": "biologia",
+        "imagem": "../assets/assetsCalculadoraNota/Biologia.png"
+    },
+    {
+        "materia": "filosofia",
+        "imagem": "../assets/assetsCalculadoraNota/Filosofia.png"
+    },
+    {
+        "materia": "quimica",
+        "imagem": "../assets/assetsCalculadoraNota/Quimica.png"
+    },
+    {
+        "materia": "matematica",
+        "imagem": "../assets/assetsCalculadoraNota/Matematica.png"
+    },
+    {
+        "materia": "fisica",
+        "imagem": "../assets/assetsCalculadoraNota/Fisica.png"
+    },
+    {
+        "materia": "portugues",
+        "imagem": "../assets/assetsCalculadoraNota/Portugues.png"
+    },
+    {
+        "materia": "redacao",
+        "imagem": ""
+    },
+    {
+        "materia": "geografia",
+        "imagem": "../assets/assetsCalculadoraNota/Geografia.png"
+    },
+    {
+        "materia": "historia",
+        "imagem": "../assets/assetsCalculadoraNota/Historia.png"
+    },
+    {
+        "materia": "sociologia",
+        "imagem": ""
+    }
+]

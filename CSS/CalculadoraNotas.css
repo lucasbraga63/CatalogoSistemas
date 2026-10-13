@@ -27,7 +27,7 @@ body {
     min-height: 100px;
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 50px;
     padding: 20px;
 }
 
@@ -69,7 +69,7 @@ body {
     min-height: 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 50px;
 }
 
@@ -97,12 +97,24 @@ form .titulo {
     gap: 15px;
 }
 
-.input {
+.input,
+.Select {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
+
+.Select select {
+    height: 30px;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    outline: none;
+    transition: 0.5s;
+    color: #666565;
+}
+
 
 .input input {
     height: 35px;
@@ -114,11 +126,18 @@ form .titulo {
     color: #666565;
 }
 
-.input input:hover {
-    box-shadow: 0 0px 0px 2px var(--fundo-containerSite);
+.input input:hover,
+.Select select:hover {
+    box-shadow: 0 0px 0px 2px #0e3f5f50;
 }
 
-.input label {
+.input input:focus,
+.Select select:focus {
+    box-shadow: 0 0px 0px 2px #14537e50;
+}
+
+.input label,
+.Select label {
     font-size: 12px;
     color: #114a70;
     font-weight: bold;
@@ -131,4 +150,119 @@ form .titulo {
     gap: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.botoes {
+    width: 100%;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+}
+
+.botoes button {
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+    background-color: #0e3f5f;
+    color: #faf8f8;
+    transition: 0.5s;
+}
+
+.botoes button:hover {
+    transform: translateY(-2px);
+    background: transparent;
+    border: 2px solid #666565;
+    color: #0e3f5f;
+}
+
+.botoes #limparTudo {
+    background: transparent;
+    border: 2px solid #666565;
+    color: #0e3f5f;
+}
+
+.botoes #limparTudo:hover {
+    border: none;
+    background-color: #0e3f5f;
+    color: #faf8f8;
+}
+
+.containerMaterias {
+    width: 45%;
+    border-radius: 10px;
+    gap: 20px;
+    background: linear-gradient(165deg, #17669b, #2b2b57, #0e3f5f);
+    height: 415px;
+    border-right: 5px solid #00000067;
+    border-bottom: 5px solid #00000067;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card {
+    width: 100%;
+    min-height: 120px;
+    display: flex;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: stretch;
+    border-radius: 10px;
+    gap: 15px;
+    background-color: #f7f7f7;
+    border: 2px solid #b4b4b4;
+    transition: 0.5s;
+}
+
+.card:hover{
+    transform: translateY(-2px);
+}
+
+.card .imagem {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card .imagem img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .InformacaoMateria {
+    width: 70%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .InformacaoMateria h2 {
+    font-size: 20px;
+    color: #0e3f5f;
+}
+
+.card .InformacaoMateria p {
+    font-size: 12px;
+    color: #555454;
+}
+
+.cardSemNada{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px dashed #ffffff;
+    background-color: #ffffff62;
+}
+
+.cardSemNada p{
+    color: #08263a;
 }
