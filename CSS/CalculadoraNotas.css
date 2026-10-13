@@ -1,15 +1,134 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "RobotoMono", monospace;
 }
-:root{
-    --fundo-body: #f7ffff;
+
+:root {
+    --fundo-body: #dadada;
+    --fundo-containerSite: #17669b;
+    --Titulo: #f8f8f8;
+    --tituloSecundario: #eeeaea;
 }
-body{
+
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.containerSite {
+    width: 70%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 20px;
+}
+
+.CabecalhoSite {
+    width: 100%;
+    background-color: var(--fundo-containerSite);
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.CabecalhoSite .Data {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.CabecalhoSite .Data h3 {
+    color: var(--tituloSecundario);
+    font-size: 25px;
+}
+
+.CabecalhoSite h1 {
+    color: var(--Titulo);
+    font-size: 30px;
+}
+
+.CabecalhoSite p {
+    color: var(--Titulo);
+    font-size: 17px;
+}
+
+.containerSistema {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+form {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.308);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form .titulo {
+    text-align: center;
+    color: #0e3f5f;
+}
+
+.inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input input {
+    height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    outline: none;
+    transition: 0.5s;
+    color: #666565;
+}
+
+.input input:hover {
+    box-shadow: 0 0px 0px 2px var(--fundo-containerSite);
+}
+
+.input label {
+    font-size: 12px;
+    color: #114a70;
+    font-weight: bold;
+}
+
+.inputQuadruplo {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
