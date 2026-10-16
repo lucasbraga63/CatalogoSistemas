@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/ControleBiblioteca.css">
+    <script src="../JS/ControleBiblioteca.js" defer></script>
     <title>Controle de Biblioteca</title>
 </head>
 
@@ -36,25 +37,25 @@
                 <p>Adicione títulos ao acervo da biblioteca.</p>
 
                 <div class="inputContainer">
-                    <label for="titulo">Titulo</label>
-                    <input type="text" id="titulo" placeholder="Titulo do livro">
+                    <label for="inputTitulo">Titulo</label>
+                    <input type="text" id="inputTitulo" placeholder="Titulo do livro">
                 </div>
 
                 <div class="inputContainer">
-                    <label for="autor">Autor</label>
-                    <input type="text" id="autor" placeholder="Autor do livro">
+                    <label for="inputAutor">Autor</label>
+                    <input type="text" id="inputAutor" placeholder="Autor do livro">
                 </div>
 
                 <div class="selectContainer">
-                    <label for="categoria">Categoria</label>
-                    <select name="categoria" id="categoria">
+                    <label for="selectCategoria">Categoria</label>
+                    <select name="categoria" id="selectCategoria">
                         <option value="Progamacao">Progamação</option>
                         <option value="Rede">Rede</option>
                         <option value="Design">Design</option>
                         <option value="Outros">Outros</option>
                     </select>
                 </div>
-                <button type="button">Cadastrar livro</button>
+                <button type="button" onclick="addBook()">Cadastrar livro</button>
             </div>
             <div class="cardShow">
                 <div class="cardShowTop">
@@ -64,7 +65,7 @@
                 <p>Use os botões de empréstimo e devolução para atualizar os registros.</p>
                 <div class="showSearch">
                     <p>Nenhum livro encontrado.</p>
-                    <div class="cardLivro">
+                    <!-- <div class="cardLivro">
                         <div class="cardShowTop">
                             <div class="showSearchInfo">
                                 <h2>titulo</h2>
@@ -78,7 +79,7 @@
                         <button>deletar</button>
                         <button>Emprestar</button>
                         <button>registar devolucao</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

@@ -1,0 +1,88 @@
+const inputTitulo = document.querySelector(`#inputTitulo`)
+const inputAutor = document.querySelector(`#inputAutor`)
+const selectCategoria = document.querySelector(`#selectCategoria`)
+
+const showSearch = document.querySelector(`.showSearch`)
+
+let livros = [{ titulo: "aocubo", autor: "davint", categoria: "jogo" }]
+
+function pegarDados() {
+    let valueTitulo = inputTitulo.value
+    let valueAutor = inputAutor.value
+    let valueCategoria = selectCategoria.value
+
+    if (valueTitulo == "") {
+        alert("Preencha o titulo")
+        return
+    }
+    if (valueAutor == "") {
+        alert("Preencha o autor")
+        return
+    }
+
+    return { valueTitulo, valueAutor, valueCategoria }
+}
+
+function addBook() {
+    let { valueTitulo, valueAutor, valueCategoria } = pegarDados()
+
+    let novoLivro = { titulo: valueTitulo, autor: valueAutor, categoria: valueCategoria }
+    livros.push(novoLivro)
+    // alert(valueTitulo + valueAutor + valueCategoria)
+
+    inputTitulo.value = ""
+    inputAutor.value = ""
+
+    innerCardsBooks()
+}
+
+let disponibilidade = false
+
+function innerCardsBooks() {
+    showSearch.innerHTML = ""
+
+    for (let i = 0; i < livros.length; i++) {
+        let cardHtml = `<div class="cardLivro">
+                        <div class="cardShowTop">
+                            <div class="showSearchInfo">
+                                <h2>${livros[i].titulo}</h2>
+                                <p>${livros[i].autor} • ${livros[i].categoria}</p>
+                               
+                            `
+        if (disponibilidade == false) {
+            cardHtml += ` <p>Com: nome • Devolver até 00/00/0000</p>`
+        }
+
+        cardHtml += `</div>`
+        if (disponibilidade == true) {
+            cardHtml += ` <p id="statusTrue">Disponivel</p>`
+        }
+        if (disponibilidade == false) {
+            cardHtml += `<p id="statusFalse">Emprestado</p>`
+        }
+
+        cardHtml += `</div>
+                        <button onclick="excluir(${i})">deletar</button>`
+        if (disponibilidade == true) {
+            cardHtml += `<button  onclick="alterarDisponivel(${!disponibilidade, i})">Emprestar</button>`
+        }
+        if (disponibilidade == false) {
+            cardHtml += `<button onclick="alterarDisponivel(${!disponibilidade})">registar devolucao</button>`
+        }
+        cardHtml += `</div>`
+        showSearch.innerHTML += cardHtml
+    }
+}
+
+function excluir(index) {
+    // alert("deletar" + index)
+    livros.splice(index, 1)
+    innerCardsBooks()
+}
+
+function alterarDisponivel(status, index) {
+    // alert(status)
+    disponibilidade = status
+    innerCardsBooks()
+}
+
