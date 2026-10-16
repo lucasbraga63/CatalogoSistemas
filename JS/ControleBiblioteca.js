@@ -2,6 +2,8 @@ const inputTitulo = document.querySelector(`#inputTitulo`)
 const inputAutor = document.querySelector(`#inputAutor`)
 const selectCategoria = document.querySelector(`#selectCategoria`)
 
+const pesquisa = document.querySelector(`#pesquisa`)
+
 const showSearch = document.querySelector(`.showSearch`)
 
 let livros = [{ titulo: "aocubo", autor: "davint", categoria: "jogo" }]
@@ -47,7 +49,6 @@ function innerCardsBooks() {
                             <div class="showSearchInfo">
                                 <h2>${livros[i].titulo}</h2>
                                 <p>${livros[i].autor} • ${livros[i].categoria}</p>
-                               
                             `
         if (disponibilidade == false) {
             cardHtml += ` <p>Com: nome • Devolver até 00/00/0000</p>`
@@ -86,3 +87,55 @@ function alterarDisponivel(status, index) {
     innerCardsBooks()
 }
 
+pesquisa.addEventListener('input', (event) => {
+
+    alert(pesquisa.value)
+    // alert(livros[0].titulo[0])
+
+    // alert(livros[0].titulo[0].includes(pesquisa.value))
+    let posicaoCardspequisados = []
+    for (let i = 0; i < livros.length; i++) {
+        if (livros[0].titulo[0].includes(pesquisa.value) == true) {
+            alert("ok")
+            posicaoCardspequisados.push(i)
+            // pesquisarInnerCardsBooks()
+        }
+    }
+    alert(posicaoCardspequisados)
+
+})
+
+function pesquisarInnerCardsBooks() {
+    showSearch.innerHTML = ""
+
+    for (let i = 0; i < livros.length; i++) {
+        let cardHtml = `<div class="cardLivro">
+                        <div class="cardShowTop">
+                            <div class="showSearchInfo">
+                                <h2>${livros[i].titulo}</h2>
+                                <p>${livros[i].autor} • ${livros[i].categoria}</p>
+                            `
+        if (disponibilidade == false) {
+            cardHtml += ` <p>Com: nome • Devolver até 00/00/0000</p>`
+        }
+
+        cardHtml += `</div>`
+        if (disponibilidade == true) {
+            cardHtml += ` <p id="statusTrue">Disponivel</p>`
+        }
+        if (disponibilidade == false) {
+            cardHtml += `<p id="statusFalse">Emprestado</p>`
+        }
+
+        cardHtml += `</div>
+                        <button onclick="excluir(${i})">deletar</button>`
+        if (disponibilidade == true) {
+            cardHtml += `<button  onclick="alterarDisponivel(${!disponibilidade, i})">Emprestar</button>`
+        }
+        if (disponibilidade == false) {
+            cardHtml += `<button onclick="alterarDisponivel(${!disponibilidade})">registar devolucao</button>`
+        }
+        cardHtml += `</div>`
+        showSearch.innerHTML += cardHtml
+    }
+}
