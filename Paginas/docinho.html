@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefa</title>
     <link rel="stylesheet" href="../CSS/docinho.css">
+     
 </head>
 
 <body>
@@ -39,18 +40,20 @@
            
             <section class="tuctuc">
                <form class="blue" id="truc-form">
+                
+
                 <div class="fiel">
                      <h3>Nova Tarefa</h3>
                      <label for="tarefa">Descrição da Tarefa</label>
-                <input type="text" id="tarefa" placeholder="EX:. Estudar a historia do tango"><br>
+                <input type="text" id="tarefa" placeholder="EX:. Estudar a historia do tango" required><br>
                      <label for="prior">Prioridade</label><br>
-                     <select name="pri" id="prior">
+                     <select name="pri" id="prior" required>
                         <option value="Baixa">Baixa</option>
                         <option value="Média">Média</option>
                         <option value="Alta">Alta</option>
                      </select>
                     
-                              <button>Adicionar Tarefa</button>
+                              <button type="submit">Adicionar Tarefa</button>
                      </div>
                     
             </form>
@@ -65,13 +68,15 @@
                     <option value="concl">Concluída</option>
                 </select>
                 </div>
-               
+                
+
                     <div id="lista" class="itens"></div>
             </section>
-           
+            <script src="../JS/docinho.js"></script>
+         
         </div>
         </main>
-         
+       
     </div>
 
 
