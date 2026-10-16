@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "RobotoMono", monospace;
+}
+
+body {
+    background-color: #dadada;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+}
+
+.cabecalho {
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cabecalho h1 {
+    color: #181818;
+}
+
+.cabecalho p {
+    color: #222222;
+    font-weight: 700;
+}
+
+.containerSistemas {
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+}
+
+.cardSistema {
+    width: 100%;
+    min-height: 170px;
+    background-color: #292828;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.cardSistema:hover {
+    transform: translateY(-3px);
+}
+
+.cabecalhoCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #dadada;
+}
+
+.cabecalhoCard h2 {
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.cabecalhoCard p {
+    color: #b5b1b5;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.botoes {
+    height: 42px;
+    width: 100%;
+}
+
+.botoes a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #246387;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.botoes a:hover {
+    background-color: #125f6d;
+    transform: translateY(-2px);
+}

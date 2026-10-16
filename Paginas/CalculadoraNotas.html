@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/CalculadoraNotas.css">
+    <script src="../JS/CalculadoraNotas.js" defer></script>
     <title>Calculadora de notas</title>
 </head>
+
 <body>
-    
+
+    <div class="containerSite">
+        <div class="CabecalhoSite">
+            <div class="Data">
+                <h3>Atividade - Data: 13/10/2026</h3>
+            </div>
+            <h1>Calculadora Notas</h1>
+            <p>Sistema que calcula média de uma pessoa.</p>
+        </div>
+
+        <div class="containerSistema">
+            <form id="formulario">
+                <div class="titulo">
+                    <h2>Calcule a média</h2>
+                </div>
+                <div class="inputs">
+                    <div class="input">
+                        <label for="nomeAluno">Nome completo</label>
+                        <input type="text" placeholder="Digite o nome" id="nomeAluno">
+                    </div>
+                    <div class="Select">
+                        <label for="materiaAluno">Matéria</label>
+                        <select name="materias" id="materias">
+                            <option value="biologia">Biologia</option>
+                            <option value="filosofia">Filosofia</option>
+                            <option value="quimica">Química</option>
+                            <option value="matematica">Matemática</option>
+                            <option value="fisica">Física</option>
+                            <option value="portugues">Português</option>
+                            <option value="redacao">Redação</option>
+                            <option value="geografia">Geografia</option>
+                            <option value="historia">História</option>
+                            <option value="sociologia">Sociologia</option>
+                        </select>
+                    </div>
+                    <div class="inputQuadruplo">
+                        <div class="input">
+                            <label for="nota1">Nota 1</label>
+                            <input type="number" id="nota1" placeholder="0">
+                        </div>
+                        <div class="input">
+                            <label for="nota2">Nota 2</label>
+                            <input type="number" id="nota2" placeholder="0">
+                        </div>
+                        <div class="input">
+                            <label for="nota3">Nota 3</label>
+                            <input type="number" id="nota3" placeholder="0">
+                        </div>
+                        <div class="input">
+                            <label for="nota4">Nota 4</label>
+                            <input type="number" id="nota4" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="botoes">
+                    <button id="enviarBtn">Calcular média</button>
+                    <button id="limparTudo">Limpar tudo</button>
+                </div>
+            </form>
+
+            <div class="containerMaterias" id="ContainerMateriasRegistradas">
+                <div class="cardSemNada">
+                    <p>nem uma materia registrada</p>
+                </div>
+            </div> 
+        </div>
+    </div>
 </body>
+
 </html>

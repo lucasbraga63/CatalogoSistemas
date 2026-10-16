@@ -1,15 +1,249 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "RobotoMono", monospace;
 }
-:root{
-    --fundo-body: #f7ffff;
+
+:root {
+    --fundo-body: #dadada;
+    --Titulo: #f8f8f8;
+    --tituloSecundario: #eeeaea;
 }
-body{
+
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.containerSite {
+    width: 70%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
+}
+
+.CabecalhoSite {
+    width: 100%;
+    background-color: #292929;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.CabecalhoSite .Data {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.CabecalhoSite .Data h3 {
+    color: rgb(153, 10, 153);
+    font-size: 20px;
+}
+
+.CabecalhoSite h1 {
+    color: var(--Titulo);
+    font-size: 30px;
+}
+
+.CabecalhoSite p {
+    color: var(--Titulo);
+    font-size: 17px;
+}
+
+.containerSistema {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+form {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.103);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form .titulo {
+    text-align: center;
+    color: #171718;
+}
+
+.inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input,
+.Select {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Select select {
+    height: 40px;
+    padding: 3px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    outline: none;
+    transition: 0.5s;
+    color: #666565;
+}
+
+
+.input input {
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    outline: none;
+    transition: 0.5s;
+    color: #666565;
+}
+
+.input input:hover,
+.Select select:hover {
+    box-shadow: 0 0px 0px 2px #2020202f;
+}
+
+.input input:focus,
+.Select select:focus {
+    box-shadow: 0 0px 0px 2px #640b6450;
+}
+
+.input label,
+.Select label {
+    font-size: 12px;
+    color: #272727;
+    font-weight: bold;
+}
+
+.inputQuadruplo {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.botoes {
+    width: 100%;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+}
+
+.botoes button {
+    height: 36px;
+    border-radius: 4px;
+    border: none;
+    background-color: #8a14ad;
+    color: #faf8f8;
+    transition: 0.5s;
+}
+
+.botoes button:hover {
+    transform: translateY(-2px);
+}
+
+.containerMaterias {
+    width: 45%;
+    border-radius: 5px;
+    gap: 20px;
+    background: linear-gradient(165deg, #292929, #2c2c2c, #272727);
+    height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card {
+    width: 100%;
+    min-height: 120px;
+    display: flex;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: stretch;
+    border-radius: 5px;
+    gap: 15px;
+    background-color: #f7f7f7;
+    transition: 0.5s;
+}
+
+.card:hover{
+    transform: translateY(-2px);
+}
+
+.card .imagem {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card .imagem img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .InformacaoMateria {
+    width: 70%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .InformacaoMateria h2 {
+    font-size: 20px;
+    color: #8a14ad;
+}
+
+.card .InformacaoMateria p {
+    font-size: 12px;
+    color: #555454;
+}
+
+.cardSemNada{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px dashed #8a14ad;
+    background-color: #00000062;
+}
+
+.cardSemNada p{
+    color: #ebebeb;
 }
