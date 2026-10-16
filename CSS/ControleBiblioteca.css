@@ -4,15 +4,20 @@
     padding: 0;
 }
 
+
 body {
     background-color: rgb(175, 214, 175);
 }
 
 main {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    padding: 100px 10vw;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+
+
 }
 
 h6 {
@@ -22,31 +27,38 @@ h6 {
 
 .containerTitulo {
     display: flex;
+    width: 90%;
     flex-direction: column;
     gap: 10px;
     padding: 30px;
     border-radius: 25px;
     background-color: green;
     color: white;
+    box-sizing: border-box;
 }
 
 .cardsInfoContainer {
+    width: 90%;
     display: flex;
     justify-content: space-between;
+
 }
 
 .cardInfo {
+
     display: flex;
     flex-direction: column;
-    padding: 15px;
-    min-width: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 32%;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     border: 1px solid #ccc;
 }
 
 .cardsManageContainer {
     display: flex;
+    width: 90%;
     justify-content: space-between;
 }
 
@@ -54,10 +66,11 @@ h6 {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 15px;
-    min-width: 30%;
+    padding: 30px;
+    box-sizing: border-box;
+    min-width: 33%;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     border: 1px solid #ccc;
 }
 
@@ -67,10 +80,16 @@ h6 {
     gap: 5px;
 }
 
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
 input {
     padding: 14px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    font-size: 16px;
 }
 
 .selectContainer {
@@ -83,12 +102,89 @@ select {
     padding: 14px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    font-size: 16px;
 }
 
-button{
+button {
     padding: 14px;
     border: none;
     background-color: green;
     border-radius: 10px;
     color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+button:active {
+    transform: translateY(-2px);
+    background-color: rgb(0, 100, 0);
+}
+
+.cardShow {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    box-sizing: border-box;
+    min-width: 65%;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+.cardShowTop {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showSearch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 32%;
+    min-height: 100px;
+    background-color: #ebebeb;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    border-style: dashed;
+    font-size: 16px;
+    color: #696969;
+}
+
+.cardLivro{
+    width: 100%;
+}
+
+#statusTrue{
+    display: inline-block;
+    font-size: 15px;
+    padding: 5px;
+    height: min-content;
+    color: rgb(34, 117, 1);
+    font-weight: bold;
+    border-radius: 100px;
+    background-color: rgba(168, 255, 134, 0.877);
+}
+
+#statusFalse{
+    display: inline-block;
+    font-size: 15px;
+    padding: 5px;
+    height: min-content;
+    color: rgb(117, 109, 1);
+    font-weight: bold;
+    border-radius: 100px;
+    background-color: rgba(255, 253, 134, 0.877);
+}
+
+.cardLivro button{
+    padding: 5px;
+     color: rgb(1, 117, 102);
+     background-color: rgba(134, 251, 255, 0.877);
 }

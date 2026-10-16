@@ -48,10 +48,38 @@
                 <div class="selectContainer">
                     <label for="categoria">Categoria</label>
                     <select name="categoria" id="categoria">
-                        <option value="">sedfvsd</option>
+                        <option value="Progamacao">Progamação</option>
+                        <option value="Rede">Rede</option>
+                        <option value="Design">Design</option>
+                        <option value="Outros">Outros</option>
                     </select>
                 </div>
                 <button type="button">Cadastrar livro</button>
+            </div>
+            <div class="cardShow">
+                <div class="cardShowTop">
+                    <h2>Acervo</h2>
+                    <input type="text" id="pesquisa" placeholder="Pesquisar título ou autor">
+                </div>
+                <p>Use os botões de empréstimo e devolução para atualizar os registros.</p>
+                <div class="showSearch">
+                    <p>Nenhum livro encontrado.</p>
+                    <div class="cardLivro">
+                        <div class="cardShowTop">
+                            <div class="showSearchInfo">
+                                <h2>titulo</h2>
+                                <p>Autor • classe</p>
+                                <p>Com: nome • Devolver até 00/00/0000</p>
+
+                            </div>
+                            <p id="statusTrue">Disponivel</p>
+                             <p id="statusFalse">Emprestado</p>
+                        </div>
+                        <button>deletar</button>
+                        <button>Emprestar</button>
+                        <button>registar devolucao</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
