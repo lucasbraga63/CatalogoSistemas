@@ -5,63 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefa</title>
+    <link rel="stylesheet" href="../CSS/docinho.css">
 </head>
 
 <body>
-    <header>
+    <header>  
          <h1>Lista de Tarefas</h1>
-        <p>Organize atividades e acompanhe suas conclusões.</p>
         <a href="">◈Laboratório Possibilidades</a>
         <a href="">Ver os três projetos</a>
     </header>
+    <h2>Organize atividades e acompanhe suas conclusões.</h2>
+      <main class="loc">
 
     <div class="lulu">
-
-        <main class="loc">
+      
+           
             <div class="rut">
-            <div class="rut">
-                <span>Tarefas</span>
+                <span>Tarefas</span><br>
                 <strong id="t-total">0</strong>
             </div>
 
              <div class="rut">
-                <span>Concluídas</span>
+                <span>Concluídas</span><br>
                 <strong id="t-feit">0</strong>
             </div>
 
              <div class="rut">
-                <span>Pendentes</span>
+                <span>Pendentes</span><br>
                 <strong id="t-pend">0</strong>
             </div>
         </div>
         <div class="luc">
-            <h2>Nova Tarefa</h2>
+           
             <section class="tuctuc">
                <form class="blue" id="truc-form">
                 <div class="fiel">
+                     <h3>Nova Tarefa</h3>
                      <label for="tarefa">Descrição da Tarefa</label>
-                <input type="text" id="tarefa" placeholder="EX:. Estudar a historia do tango">
-                </div>
-                  <div class="fiel">
-                     <label for="prior">Prioridade</label>
+                <input type="text" id="tarefa" placeholder="EX:. Estudar a historia do tango"><br>
+                     <label for="prior">Prioridade</label><br>
                      <select name="pri" id="prior">
                         <option value="Baixa">Baixa</option>
                         <option value="Média">Média</option>
                         <option value="Alta">Alta</option>
                      </select>
-                </div>
+                    
+                              <button>Adicionar Tarefa</button>
+                     </div>
+                    
             </form>
             </section>
             <section class="tactac">
-                <div>
-                  <h2>Minhas Tarefas</h2>
+                <div class="fiel">
+                  <h3>Minhas Tarefas</h3>
+                   <p class="intro">Marque as atividades realizadas ou exclua tarefas desnecessárias.</p>
                 <select name="ta" id="filtro" class="love">
                     <option value="todas">Todas</option>
                     <option value="pend">Pendentes</option>
                     <option value="concl">Concluída</option>
                 </select>
                 </div>
-                <p class="intro">Marque as atividades realizadas ou exclua tarefas desnecessárias.</p>
+               
                     <div id="lista" class="itens"></div>
             </section>
            
