@@ -35,6 +35,7 @@ function addBook() {
     inputTitulo.value = ""
     inputAutor.value = ""
 
+    atualizarCardInfos()
     innerCardsBooks()
 }
 
@@ -89,53 +90,65 @@ function alterarDisponivel(status, index) {
 
 pesquisa.addEventListener('input', (event) => {
 
-    alert(pesquisa.value)
+    //alert(pesquisa.value)
     // alert(livros[0].titulo[0])
 
     // alert(livros[0].titulo[0].includes(pesquisa.value))
     let posicaoCardspequisados = []
+    let igual = false
     for (let i = 0; i < livros.length; i++) {
-        if (livros[0].titulo[0].includes(pesquisa.value) == true) {
-            alert("ok")
+        igual = false
+        if (livros[i].titulo.includes(pesquisa.value) == true) {
             posicaoCardspequisados.push(i)
             // pesquisarInnerCardsBooks()
         }
-    }
-    alert(posicaoCardspequisados)
+        if (igual == true) {
 
+        }
+    }
+    //alert(posicaoCardspequisados)
+    pesquisarInnerCardsBooks(posicaoCardspequisados)
 })
 
-function pesquisarInnerCardsBooks() {
+function pesquisarInnerCardsBooks(posicao) {
     showSearch.innerHTML = ""
-
+    let tem = false
+    let indexPosicao = 0
     for (let i = 0; i < livros.length; i++) {
-        let cardHtml = `<div class="cardLivro">
+        if (i == posicao[indexPosicao]) {
+            indexPosicao++
+            let cardHtml = `<div class="cardLivro">
                         <div class="cardShowTop">
                             <div class="showSearchInfo">
                                 <h2>${livros[i].titulo}</h2>
                                 <p>${livros[i].autor} • ${livros[i].categoria}</p>
                             `
-        if (disponibilidade == false) {
-            cardHtml += ` <p>Com: nome • Devolver até 00/00/0000</p>`
-        }
+            if (disponibilidade == false) {
+                cardHtml += ` <p>Com: nome • Devolver até 00/00/0000</p>`
+            }
 
-        cardHtml += `</div>`
-        if (disponibilidade == true) {
-            cardHtml += ` <p id="statusTrue">Disponivel</p>`
-        }
-        if (disponibilidade == false) {
-            cardHtml += `<p id="statusFalse">Emprestado</p>`
-        }
+            cardHtml += `</div>`
+            if (disponibilidade == true) {
+                cardHtml += ` <p id="statusTrue">Disponivel</p>`
+            }
+            if (disponibilidade == false) {
+                cardHtml += `<p id="statusFalse">Emprestado</p>`
+            }
 
-        cardHtml += `</div>
+            cardHtml += `</div>
                         <button onclick="excluir(${i})">deletar</button>`
-        if (disponibilidade == true) {
-            cardHtml += `<button  onclick="alterarDisponivel(${!disponibilidade, i})">Emprestar</button>`
+            if (disponibilidade == true) {
+                cardHtml += `<button  onclick="alterarDisponivel(${!disponibilidade, i})">Emprestar</button>`
+            }
+            if (disponibilidade == false) {
+                cardHtml += `<button onclick="alterarDisponivel(${!disponibilidade})">registar devolucao</button>`
+            }
+            cardHtml += `</div>`
+            showSearch.innerHTML += cardHtml
+            tem = true
         }
-        if (disponibilidade == false) {
-            cardHtml += `<button onclick="alterarDisponivel(${!disponibilidade})">registar devolucao</button>`
-        }
-        cardHtml += `</div>`
-        showSearch.innerHTML += cardHtml
+    }
+    if(tem == false){
+        showSearch.innerHTML = `<p>Nenhum livro encontrado.</p>`
     }
 }

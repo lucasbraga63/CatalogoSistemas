@@ -3,5 +3,10 @@
         "nome": "Calculadora de média",
         "descricao": "Muito bom para saber da sua situação escolar",
         "link": "Paginas/CalculadoraNotas.html" 
+    },
+    {
+        "nome": "Controle de Biblioteca",
+        "descricao": "Muito bom para organizar os livros",
+        "link": "Paginas/ControleBiblioteca.html" 
     }
 ]
