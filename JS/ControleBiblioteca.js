@@ -6,6 +6,10 @@ const pesquisa = document.querySelector(`#pesquisa`)
 
 const showSearch = document.querySelector(`.showSearch`)
 
+const numLivrosCastrados = document.querySelector(`#numLivrosCastrados`)
+const numDisponiveis = document.querySelector(`#numDisponiveis`)
+const numEmprestados = document.querySelector(`#numEmprestados`)
+
 let livros = [{ titulo: "aocubo", autor: "davint", categoria: "jogo" }]
 
 function pegarDados() {
@@ -39,8 +43,17 @@ function addBook() {
     innerCardsBooks()
 }
 
-let disponibilidade = false
+atualizarCardInfos()
+function atualizarCardInfos(){
+    numLivrosCastrados.innerText = livros.length
+    //terminar depois
+    numDisponiveis.innerText = livros.length
+    numEmprestados.innerText = 0
+}
 
+let disponibilidade = true
+
+innerCardsBooks() 
 function innerCardsBooks() {
     showSearch.innerHTML = ""
 
